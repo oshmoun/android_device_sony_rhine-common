@@ -41,7 +41,6 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
     $(COMMON_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
     $(COMMON_PATH)/rootdir/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
     $(COMMON_PATH)/rootdir/system/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
@@ -132,6 +131,16 @@ PRODUCT_COPY_FILES += \
 # Off mode charger
 PRODUCT_PACKAGES += \
     charger_res_images
+
+# f2fs-tools
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+
+# Genfstab
+PRODUCT_PACKAGES += \
+    genfstab.rhine
 
 # USB
 PRODUCT_PACKAGES += \
